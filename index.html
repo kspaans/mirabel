@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Referencing HTML Elements</title>
+    <script src="tax.js"></script>
+    <style>
+      p {
+        font-size: 16pt;
+      }
+
+      .myClass {
+        color: red;  
+      }
+
+      #myId {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is the first paragraph.</p>
+    <p class="myClass">This is the second paragraph.</p>
+    <p class="myClass" id="myId">This is the third paragraph.</p>
+    <p id="label">
+      Click the button.
+    </p>
+    <button onclick="updateParagraphText();">
+      Click me!
+    </button>
+    <input id="name-input" />
+    <button onclick="sayHello();">
+      Click me!
+    </button>
+    <p id="output"></p>
+  </body>
+</html>
