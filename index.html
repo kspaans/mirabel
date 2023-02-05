@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Referencing HTML Elements</title>
-    <script src="tax.js"></script>
-    <style>
-      p {
-        font-size: 16pt;
-      }
+<head>
+<title>Mirabel Tax</title>
+<script src="tax.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
 
-      .myClass {
-        color: red;  
-      }
-
-      #myId {
-        background-color: black;
-      }
-    </style>
-  </head>
-  <body>
-    <p>This is the first paragraph.</p>
-    <p class="myClass">This is the second paragraph.</p>
-    <p class="myClass" id="myId">This is the third paragraph.</p>
+<body>
+  <div class="container">
+    <p>
+      Mirabel property tax rates and city budget calculation. Number are taken
+      from city budget, but are for demonstration purposes only.
+    </p>
+    <table class="striped responsive-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th><div class="right-align">2022</div></th>
+          <th><div class="right-align">2023</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Taux (unifamilial)</td>
+          <td><div class="right-align">0.469%</div></td>
+          <td><div class="right-align" id="rate2023">0.366%</div></td>
+        </tr>
+        <tr>
+          <td>Deficit (must be covered by prop. tax)</td>
+          <td><div class="right-align">57 517 700 $<div></td>
+          <td><div class="right-align" id="deficit2023">78 264 300 $</div></td>
+        </tr>
+        <tr>
+          <td>Budget</td>
+          <td><div class="right-align">106 500 000 $</div></td>
+          <td><div class="right-align"><div id="budget2023">119 339 000 $</div></td>
+        </tr>
+        <tr>
+          <td>Valeur Public</td>
+          <td><div class="right-align">106 500 000 $</div></td>
+          <td><div class="right-align"><div id="value2023">119 339 000 $</div></td>
+        </tr>
+        <tr>
+          <td>Valeur De Propri&eacute;t&eacute;</td>
+          <td><div class="right-align">317 431 $</div></td>
+          <td><div class="right-align"><div id="home2023">460 592 $</div></td>
+        </tr>
+        <tr>
+          <td>Compte de taxes</td>
+          <td><div class="right-align">1 489 $</div></td>
+          <td><div class="right-align"><div id="tax2023">1 686 $</div></td>
+        </tr>
+      </tbody>
+    </table>
     <p id="label">
-      Click the button.
+      Click the button to calculate the tax rate.
     </p>
     <button onclick="updateParagraphText();">
-      Click me!
+      Calculer
     </button>
     <input id="name-input" />
     <button onclick="sayHello();">
       Click me!
     </button>
     <p id="output"></p>
-  </body>
+  </div>
+</body>
 </html>
